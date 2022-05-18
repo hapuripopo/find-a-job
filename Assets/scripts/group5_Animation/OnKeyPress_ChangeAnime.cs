@@ -22,9 +22,12 @@ public class OnKeyPress_ChangeAnime : MonoBehaviour
 
     void Update()// 계속 시행한다 
     { 
-        if (Input.GetKey("up"))// 위 키면
-        { 
-            nowMode = upAnime;
+        if (Input.GetKey("space"))// 위 키면
+        {
+            if (nowMode == rightAnime)
+                nowMode = upAnime;
+            else
+                nowMode = downAnime;
         }
         if (Input.GetKey("down"))// 아래 키면
         { 
